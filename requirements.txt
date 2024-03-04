@@ -1,0 +1,12 @@
+numpy
+pyarrow
+pandas
+scikit-learn
+nltk
+jupyter
+joblib
+
+fastapi
+uvicorn
+
+requests
