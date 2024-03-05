@@ -14,7 +14,7 @@ app = FastAPI(
     version="0.1"
 )
 
-@app.post("/predict")
+@app.post("/predict", response_model=schemas.PredictRespons)
 def predict(review: schemas.TextToPredict):
     """
     
