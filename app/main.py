@@ -1,6 +1,7 @@
 import joblib
 import uvicorn
 from app import preprocessing as pp
+from app import schemas
 from fastapi import FastAPI
 
 from os.path import dirname, join, realpath
@@ -14,11 +15,11 @@ app = FastAPI(
 )
 
 @app.post("/predict")
-def predict(review: str):
+def predict(review: schemas.TextToPredict):
     """
     
     """
-    cleaned_review = pp.text_cleaning(review)
+    cleaned_review = pp.text_cleaning(review.text)
 
     # prediction
     prediction = model.predict([cleaned_review])
