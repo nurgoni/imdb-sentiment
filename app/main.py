@@ -13,7 +13,7 @@ app = FastAPI(
     version="0.1"
 )
 
-@app.get("/predict")
+@app.post("/predict")
 def predict(review: str):
     """
     
