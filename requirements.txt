@@ -8,5 +8,6 @@ joblib
 
 fastapi
 uvicorn
+pydantic
 
 requests
