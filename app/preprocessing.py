@@ -5,6 +5,7 @@ from string import punctuation
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
+nltk.download('stopwords')
 stop_words = stopwords.words("english")
 
 def text_cleaning(text, remove_stop_words=True, lemmatize_words=True):
