@@ -1,12 +1,10 @@
 import joblib
-import uvicorn
 from app import preprocessing as pp
 from app import schemas
 from fastapi import FastAPI
 
-from os.path import dirname, join, realpath
 
-with open (join(dirname(realpath(__file__)), "models/sentiment_model_pipeline.pkl"), "rb") as f:
+with open("app/models/sentiment_model_pipeline.pkl", "rb") as f:
     model = joblib.load(f)
 
 app = FastAPI(
